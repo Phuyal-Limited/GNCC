@@ -3,44 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Global Nepal Chamber of Commerce</title>
+
+  <title>Global Nepal Chamber of Commerce (GNCC)</title>
+  <meta name="description" content="The Global Nepal Chamber of Commerce (GNCC) is an independent, international chamber connecting Nepali and global business leaders to foster trade, investment, and responsible economic engagement with Nepal." />
+
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
   <header>
-    <img src="images/banner.jpg" class="banner" alt="GNCC Banner" />
+    <img src="images/banner.jpg" class="banner" alt="Global Nepal Chamber of Commerce banner" />
     <div class="container header-content">
-      <img src="images/logo.png" alt="GNCC Logo" class="logo" />
+      <img src="images/logo.png" alt="Global Nepal Chamber of Commerce logo" class="logo" />
       <h1>Global Nepal Chamber of Commerce (GNCC)</h1>
       <p class="tagline">Connecting Nepal to the World — and the World to Nepal</p>
     </div>
   </header>
 
-<div id="nav-placeholder"></div>
-<script>
-  fetch("nav.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("nav-placeholder").innerHTML = data;
+  <!-- Shared Navigation -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
 
-      const currentPage = window.location.pathname.split("/").pop() || "index.html";
-      const links = document.querySelectorAll("nav a");
+        const currentPage = window.location.pathname.split("/").pop() || "index.html";
+        const links = document.querySelectorAll("nav a");
 
-      links.forEach(link => {
-        if (link.getAttribute("data-page") === currentPage) {
-          link.classList.add("active");
-        }
+        links.forEach(link => {
+          if (link.getAttribute("data-page") === currentPage) {
+            link.classList.add("active");
+          }
+        });
       });
-    });
-</script>
+  </script>
 
   <main class="container">
     <h2>Welcome to GNCC</h2>
 
     <p>
-      The Global Nepal Chamber of Commerce (GNCC) is an independent, international,
-      member-driven platform that brings together entrepreneurs, investors,
-      and institutions from Nepal and across the world.
+      The Global Nepal Chamber of Commerce (GNCC) is an independent,
+      international, member-driven platform that brings together
+      entrepreneurs, investors, and institutions from Nepal and
+      across the world.
     </p>
 
     <p>
@@ -50,10 +56,10 @@
     </p>
 
     <p>
-      Operating on global best-practice principles, GNCC aims to complement
-      existing bilateral and sector-specific chambers by providing a
-      cross-border, globally oriented perspective on Nepal’s economic
-      integration and long-term growth.
+      Operating on global best-practice principles, GNCC aims to
+      complement existing bilateral and sector-specific chambers by
+      providing a cross-border, globally oriented perspective on
+      Nepal’s economic integration and long-term growth.
     </p>
   </main>
 
@@ -69,5 +75,6 @@
       </p>
     </div>
   </footer>
+
 </body>
 </html>
