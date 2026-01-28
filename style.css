@@ -61,3 +61,14 @@ footer {
   font-size: 0.9em;
 }
 
+/* Active navigation link (current page) */
+nav ul li a.active {
+  border-bottom: 2px solid #ffffff;
+  padding-bottom: 2px;
+}
+
+/* Optional: subtle hover effect (safe & professional) */
+nav ul li a:hover {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
+  padding-bottom: 2px;
+}
