@@ -20,8 +20,8 @@
 <body>
 
   <!-- HERO -->
-  <header class="hero-section border-bottom fade-in">
-    <div class="container py-5 text-center">
+  <header class="hero-section py-3 text-center fade-in">
+    <div class="container py-5">
       <h1 class="fw-bold mb-3">Global Nepal Chamber of Commerce</h1>
       <p class="lead fw-semibold mb-4">
         Mobilising Global Trade, Capital &amp; Influence for Nepal
@@ -45,39 +45,62 @@
     </div>
   </header>
 
-  <!-- MAIN -->
+  <!-- SHARED NAVIGATION -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+
+        const currentPage =
+          window.location.pathname.split("/").pop() || "index.html";
+
+        document.querySelectorAll("nav a").forEach(link => {
+          if (link.getAttribute("data-page") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+  </script>
+
+  <!-- MAIN CONTENT -->
   <main class="container py-5">
 
     <!-- WHY GNCC -->
     <section class="fade-in mb-5">
       <h2 class="fw-bold mb-3">Why GNCC</h2>
+
       <p class="fs-5">
         Nepal’s engagement with the global economy has outgrown bilateral
         chambers and fragmented networks.
       </p>
+
       <p>
         GNCC exists to replace fragmentation with coordination — enabling
         multi-market access, structured capital mobilisation, and institutional
         collaboration through a single global platform.
       </p>
+
       <p class="fw-semibold">
         We operate independently, non-politically, and with a clear mandate:
         delivery over representation.
       </p>
     </section>
 
-    <!-- Visual Divider -->
-<section class="visual-divider fade-in my-5">
-  <picture>
-    <source srcset="images/global-abstract.webp" type="image/webp">
-    <img
-      src="images/global-abstract.jpg"
-      alt="Abstract global trade and connectivity"
-      loading="lazy"
-      decoding="async"
-    >
-  </picture>
-</section>
+    <!-- VISUAL DIVIDER -->
+    <section class="visual-divider fade-in my-5">
+      <picture>
+        <source srcset="images/global-abstract.webp" type="image/webp">
+        <img
+          src="images/global-abstract.png"
+          alt="Abstract global trade and connectivity"
+          loading="lazy"
+          decoding="async"
+          class="img-fluid rounded"
+        >
+      </picture>
+    </section>
 
     <!-- WHAT GNCC EXECUTES -->
     <section class="section-card section-primary fade-in p-4 p-md-5 mb-5">
@@ -85,47 +108,39 @@
 
       <div class="row g-4">
         <div class="col-md-6">
-          <div class="execute-block mb-4">
-            <h5 class="fw-bold">Trade &amp; Investment</h5>
-            <p>
-              Structured market access, investor engagement, and cross-border
-              partnerships delivered through curated delegations, sector-specific
-              roundtables, and execution-focused initiatives linked to Nepal.
-            </p>
-          </div>
+          <h5 class="fw-bold">Trade &amp; Investment</h5>
+          <p>
+            Structured market access, investor engagement, and cross-border
+            partnerships delivered through curated delegations, sector-specific
+            roundtables, and execution-focused initiatives linked to Nepal.
+          </p>
         </div>
 
         <div class="col-md-6">
-          <div class="execute-block mb-4">
-            <h5 class="fw-bold">Diaspora Leadership</h5>
-            <p>
-              Conversion of global Nepali expertise and capital into outcomes
-              through leadership councils, chapter governance, and disciplined
-              participation — not informal networking.
-            </p>
-          </div>
+          <h5 class="fw-bold">Diaspora Leadership</h5>
+          <p>
+            Conversion of global Nepali expertise and capital into outcomes
+            through leadership councils, chapter governance, and disciplined
+            participation — not informal networking.
+          </p>
         </div>
 
         <div class="col-md-6">
-          <div class="execute-block mb-4">
-            <h5 class="fw-bold">Digital Economy &amp; Innovation</h5>
-            <p>
-              Positioning Nepal within global value chains by advancing technology
-              services, digital trade, and innovation partnerships across AI,
-              cloud, and knowledge exports.
-            </p>
-          </div>
+          <h5 class="fw-bold">Digital Economy &amp; Innovation</h5>
+          <p>
+            Positioning Nepal within global value chains by advancing technology
+            services, digital trade, and innovation partnerships across AI,
+            cloud, and knowledge exports.
+          </p>
         </div>
 
         <div class="col-md-6">
-          <div class="execute-block mb-4">
-            <h5 class="fw-bold">Policy Engagement</h5>
-            <p>
-              Practical, solution-oriented engagement with governments and
-              institutions to strengthen trade, investment, and digital-economy
-              frameworks.
-            </p>
-          </div>
+          <h5 class="fw-bold">Policy Engagement</h5>
+          <p>
+            Practical, solution-oriented engagement with governments and
+            institutions to strengthen trade, investment, and digital-economy
+            frameworks.
+          </p>
         </div>
       </div>
     </section>
@@ -133,6 +148,7 @@
     <!-- WHO IT IS FOR -->
     <section class="fade-in mb-5">
       <h2 class="fw-bold mb-3">Who GNCC Is Built For</h2>
+
       <ul class="fs-5 audience-list">
         <li>Enterprises seeking structured, credible global expansion linked to Nepal</li>
         <li>Investors requiring trusted, de-risked access to cross-border opportunities</li>
@@ -148,7 +164,7 @@
     <!-- GLOBAL STRUCTURE -->
     <section class="section-card fade-in p-4 p-md-5 mb-5">
       <h2 class="fw-bold mb-3">Global Structure</h2>
-      <p>GNCC operates through:</p>
+
       <ul>
         <li>Initial international chapters</li>
         <li>Diaspora-led leadership councils</li>
@@ -168,6 +184,7 @@
     <!-- JOIN -->
     <section class="fade-in text-center">
       <h2 class="fw-bold mb-3">Join GNCC</h2>
+
       <p class="fs-5 mb-4">
         GNCC is being formed by those prepared to shape outcomes, not observe them.
       </p>
@@ -183,14 +200,14 @@
   </main>
 
   <!-- FOOTER -->
-<footer class="footer-primary">
-  <div class="container">
-    <p class="footer-title mb-2">Global Nepal Chamber of Commerce</p>
-    <p class="footer-tagline mb-0">
-      An independent global institution for trade, investment, and economic collaboration.
-    </p>
-  </div>
-</footer>
+  <footer class="footer-primary">
+    <div class="container">
+      <p class="footer-title mb-2">Global Nepal Chamber of Commerce</p>
+      <p class="footer-tagline mb-0">
+        An independent global institution for trade, investment, and economic collaboration.
+      </p>
+    </div>
+  </footer>
 
   <!-- Bootstrap JS -->
   <script
