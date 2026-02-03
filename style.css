@@ -255,3 +255,26 @@ footer p:first-child {
   );
   padding-left: calc(1.5rem + 6px);
 }
+/* =========================
+   Footer Emphasis
+   (Institutional Closure)
+========================= */
+
+.footer-primary {
+  background-color: #002244;
+  border-top: 4px solid #003366;
+  padding: 32px 0;
+}
+
+.footer-title {
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
+
+.footer-tagline {
+  opacity: 0.85;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
