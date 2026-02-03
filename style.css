@@ -4,33 +4,36 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: #f5f5f5;
   color: #333;
+  line-height: 1.65;
 }
 .container {
   width: 90%;
-  max-width: 1000px;
+  max-width: 1100px;
   margin: auto;
-  padding: 20px 0;
+  padding: 24px 0; 
 }
 header {
+  padding-bottom: 10px;
   position: relative;
   color: #003366;
   text-align: center;
 }
 .banner {
   width: 100%;
-  max-height: 250px;
+  max-height: 180px;
   object-fit: cover;
 }
 .logo {
-  width: 80px;
-  margin-top: -50px;
+  width: 86px;
+  margin-top: -40px;
   background: white;
-  padding: 5px;
-  border-radius: 10px;
+  padding: 6px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 nav {
   background-color: #003366;
-  padding: 10px 0;
+  padding: 8px 0;
 }
 nav ul {
   list-style: none;
@@ -40,12 +43,16 @@ nav ul {
   justify-content: center;
 }
 nav ul li {
-  margin: 0 15px;
+  margin: 0 8px;
 }
 nav ul li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  padding: 10px 12px;
+  border-radius: 8px;
+  display: inline-block;
+  border-bottom: 2px solid transparent;
 }
 main section {
   margin: 40px 0;
@@ -57,18 +64,31 @@ footer {
   background-color: #002244;
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 14px 0;
   font-size: 0.9em;
 }
 
 /* Active navigation link (current page) */
 nav ul li a.active {
-  border-bottom: 2px solid #ffffff;
-  padding-bottom: 2px;
+  background: rgba(255,255,255,0.14);
+  border-bottom-color: rgba(255,255,255,0.7);
 }
 
 /* Optional: subtle hover effect (safe & professional) */
 nav ul li a:hover {
-  border-bottom: 2px solid rgba(255, 255, 255, 0.6);
-  padding-bottom: 2px;
+  background: rgba(255,255,255,0.10);
+  border-bottom-color: rgba(255,255,255,0.5);
+}
+
+@media (max-width: 720px){
+  nav ul{
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding: 0 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+  nav ul li{
+    margin: 0 6px;
+    white-space: nowrap;
+  }
 }
