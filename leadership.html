@@ -1,118 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Leadership | Global Nepal Chamber of Commerce</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Leadership | Global Nepal Chamber of Commerce (GNCC)</title>
+  <meta name="description" content="Leadership framework of the Global Nepal Chamber of Commerce (GNCC), outlining interim governance, responsibilities, and the evolution of leadership structures." />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Site Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<header>
-  <img src="images/banner.jpg" class="banner" alt="GNCC Banner" />
-  <div class="container">
-    <img src="images/logo.png" class="logo" alt="GNCC Logo">
-    <h1>Global Nepal Chamber of Commerce (GNCC)</h1>
-  </div>
-</header>
+  <!-- Header -->
+  <header class="hero-section py-4 text-center border-bottom">
+    <div class="container">
+      <img src="images/logo.png" alt="GNCC Logo" width="90" class="mb-3">
+      <h1 class="fw-bold mb-0">Global Nepal Chamber of Commerce (GNCC)</h1>
+    </div>
+  </header>
 
-<div id="nav-placeholder"></div>
-<script>
-  fetch("nav.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("nav-placeholder").innerHTML = data;
+  <!-- Shared Navigation -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
 
-      const currentPage = window.location.pathname.split("/").pop() || "index.html";
-      const links = document.querySelectorAll("nav a");
+        const currentPage =
+          window.location.pathname.split("/").pop() || "leadership.html";
 
-      links.forEach(link => {
-        if (link.getAttribute("data-page") === currentPage) {
-          link.classList.add("active");
-        }
+        document.querySelectorAll("nav a").forEach(link => {
+          if (link.getAttribute("data-page") === currentPage) {
+            link.classList.add("active");
+          }
+        });
       });
-    });
-</script>
+  </script>
 
-<main class="container">
+  <!-- Main Content -->
+  <main class="container py-5">
 
-  <h2>Leadership</h2>
+    <!-- Leadership Overview -->
+    <section class="mb-5">
+      <h2 class="fw-bold mb-3">Leadership</h2>
 
-  <p>
-    The leadership of the Global Nepal Chamber of Commerce (GNCC) is
-    responsible for providing strategic direction, institutional
-    stewardship, and oversight in alignment with GNCC’s mission and
-    governance principles.
-  </p>
+      <p class="fs-5 text-measure">
+        The leadership of the Global Nepal Chamber of Commerce (GNCC) is
+        responsible for providing strategic direction, institutional
+        stewardship, and oversight in alignment with GNCC’s mission and
+        governance principles.
+      </p>
 
-  <p>
-    GNCC is currently operating under an interim and founding leadership
-    framework, established to support the formation, early development,
-    and responsible growth of the chamber.
-  </p>
+      <p class="text-measure">
+        GNCC is currently operating under an interim and founding leadership
+        framework, established to support the formation, early development,
+        and responsible growth of the chamber.
+      </p>
+    </section>
 
-  <h2>Founding & Interim Leadership</h2>
+    <!-- Founding Leadership -->
+    <section class="section-card p-4 p-md-5 mb-5">
+      <h2 class="fw-bold mb-3">Founding & Interim Leadership</h2>
 
-  <p>
-    During the founding phase, interim leadership roles are appointed to
-    ensure continuity, operational readiness, and adherence to GNCC’s
-    guiding principles.
-  </p>
+      <p class="text-measure">
+        During the founding phase, interim leadership roles are appointed to
+        ensure continuity, operational readiness, and adherence to GNCC’s
+        guiding principles.
+      </p>
 
-  <p>
-    Details of interim office bearers and leadership roles will be
-    published in due course, in line with GNCC’s governance framework
-    and transparency commitments.
-  </p>
+      <p class="text-measure mb-0">
+        Details of interim office bearers and leadership roles will be
+        published in due course, in line with GNCC’s governance framework
+        and transparency commitments.
+      </p>
+    </section>
 
-  <h2>Roles & Responsibilities</h2>
+    <!-- Roles -->
+    <section class="mb-5">
+      <h2 class="fw-bold mb-4">Roles & Responsibilities</h2>
 
-  <ul>
-    <li>
-      <strong>Strategic Oversight:</strong>
-      Guiding the long-term vision, priorities, and institutional
-      direction of GNCC.
-    </li>
-    <li>
-      <strong>Representation:</strong>
-      Acting as custodians of GNCC’s values in external engagements
-      with members, partners, and stakeholders.
-    </li>
-    <li>
-      <strong>Governance & Integrity:</strong>
-      Upholding GNCC’s governance framework, ethical standards,
-      and non-political stance.
-    </li>
-    <li>
-      <strong>Institution Building:</strong>
-      Supporting the establishment of chapters, programmes,
-      and sustainable operational structures.
-    </li>
-  </ul>
+      <ul class="text-measure">
+        <li class="mb-2">
+          <strong>Strategic Oversight:</strong>
+          Guiding the long-term vision, priorities, and institutional
+          direction of GNCC.
+        </li>
+        <li class="mb-2">
+          <strong>Representation:</strong>
+          Acting as custodians of GNCC’s values in external engagements
+          with members, partners, and stakeholders.
+        </li>
+        <li class="mb-2">
+          <strong>Governance & Integrity:</strong>
+          Upholding GNCC’s governance framework, ethical standards,
+          and non-political stance.
+        </li>
+        <li>
+          <strong>Institution Building:</strong>
+          Supporting the establishment of chapters, programmes,
+          and sustainable operational structures.
+        </li>
+      </ul>
+    </section>
 
-  <h2>Advisory Participation</h2>
+    <!-- Advisory -->
+    <section class="section-card p-4 p-md-5 mb-5">
+      <h2 class="fw-bold mb-3">Advisory Participation</h2>
 
-  <p>
-    GNCC may invite distinguished individuals from business, academia,
-    and international institutions to contribute in an advisory
-    capacity. Advisory participants provide guidance and insight
-    without executive authority.
-  </p>
+      <p class="text-measure mb-0">
+        GNCC may invite distinguished individuals from business, academia,
+        and international institutions to contribute in an advisory
+        capacity. Advisory participants provide guidance and insight
+        without executive authority.
+      </p>
+    </section>
 
-  <h2>Future Leadership Evolution</h2>
+    <!-- Evolution -->
+    <section>
+      <h2 class="fw-bold mb-3">Future Leadership Evolution</h2>
 
-  <p>
-    As GNCC matures, leadership structures and selection mechanisms
-    may evolve to include broader member participation, nominations,
-    or elections, consistent with international chamber practices.
-  </p>
+      <p class="text-measure">
+        As GNCC matures, leadership structures and selection mechanisms
+        may evolve to include broader member participation, nominations,
+        or elections, consistent with international chamber practices.
+      </p>
+    </section>
 
-</main>
+  </main>
 
-<footer>
-  <div class="container">
-    <p>&copy; 2026 Global Nepal Chamber of Commerce. All rights reserved.</p>
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer class="footer-primary">
+    <div class="container">
+      <p class="footer-title mb-2">Global Nepal Chamber of Commerce</p>
+      <p class="footer-tagline mb-0">
+        An independent global institution for trade, investment, and economic collaboration.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+  </script>
 
 </body>
 </html>
