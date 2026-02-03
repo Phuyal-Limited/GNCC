@@ -240,3 +240,18 @@ footer p:first-child {
 .visual-divider img {
   content-visibility: auto;
 }
+
+/* =========================
+   Primary Section Emphasis
+   (Execution Anchor)
+========================= */
+
+.section-primary {
+  border-left: 6px solid #003366;
+  background: linear-gradient(
+    to right,
+    rgba(0,51,102,0.035),
+    #ffffff 28%
+  );
+  padding-left: calc(1.5rem + 6px);
+}
