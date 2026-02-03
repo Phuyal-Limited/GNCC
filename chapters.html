@@ -1,118 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Chapters | Global Nepal Chamber of Commerce</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Chapters | Global Nepal Chamber of Commerce (GNCC)</title>
+  <meta name="description" content="Global chapters of the Global Nepal Chamber of Commerce (GNCC), outlining the chapter framework, regional presence, and participation model." />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Site Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<header>
-  <img src="images/banner.jpg" class="banner" alt="GNCC Banner" />
-  <div class="container">
-    <img src="images/logo.png" class="logo" alt="GNCC Logo">
-    <h1>Global Nepal Chamber of Commerce (GNCC)</h1>
-  </div>
-</header>
+  <!-- Header -->
+  <header class="hero-section py-4 text-center border-bottom">
+    <div class="container">
+      <img src="images/logo.png" alt="GNCC Logo" width="90" class="mb-3">
+      <h1 class="fw-bold mb-0">Global Nepal Chamber of Commerce (GNCC)</h1>
+    </div>
+  </header>
 
-<div id="nav-placeholder"></div>
-<script>
-  fetch("nav.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("nav-placeholder").innerHTML = data;
+  <!-- Shared Navigation -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
 
-      const currentPage = window.location.pathname.split("/").pop() || "index.html";
-      const links = document.querySelectorAll("nav a");
+        const currentPage =
+          window.location.pathname.split("/").pop() || "chapters.html";
 
-      links.forEach(link => {
-        if (link.getAttribute("data-page") === currentPage) {
-          link.classList.add("active");
-        }
+        document.querySelectorAll("nav a").forEach(link => {
+          if (link.getAttribute("data-page") === currentPage) {
+            link.classList.add("active");
+          }
+        });
       });
-    });
-</script>
+  </script>
 
-<main class="container">
+  <!-- Main Content -->
+  <main class="container py-5">
 
-  <h2>Global Chapters</h2>
+    <!-- Overview -->
+    <section class="mb-5">
+      <h2 class="fw-bold mb-3">Global Chapters</h2>
 
-  <p>
-    The Global Nepal Chamber of Commerce (GNCC) operates through a
-    chapter-based model designed to support local engagement while
-    maintaining a shared global mission and governance framework.
-  </p>
+      <p class="fs-5 text-measure">
+        The Global Nepal Chamber of Commerce (GNCC) operates through a
+        chapter-based model designed to support local engagement while
+        maintaining a shared global mission, governance framework,
+        and institutional standards.
+      </p>
 
-  <p>
-    GNCC chapters provide platforms for members to collaborate,
-    exchange insights, and advance Nepal-related economic engagement
-    within their respective regions.
-  </p>
+      <p class="text-measure">
+        GNCC chapters provide structured platforms for members to
+        collaborate, exchange insights, and advance Nepal-related
+        economic engagement within their respective regions.
+      </p>
+    </section>
 
-  <h2>Chapter Framework</h2>
+    <!-- Chapter Framework -->
+    <section class="section-card p-4 p-md-5 mb-5">
+      <h2 class="fw-bold mb-4">Chapter Framework</h2>
 
-  <p>
-    Chapters are established in accordance with GNCC’s governance
-    principles and operate in alignment with the chamber’s mission,
-    code of conduct, and non-political stance.
-  </p>
+      <p class="text-measure mb-4">
+        Chapters are established in accordance with GNCC’s governance
+        principles and operate in alignment with the chamber’s mission,
+        code of conduct, and non-political stance.
+      </p>
 
-  <ul>
-    <li>
-      Chapters reflect regional priorities while contributing to
-      GNCC’s global objectives.
-    </li>
-    <li>
-      Chapters operate with defined coordination mechanisms with
-      the GNCC Secretariat.
-    </li>
-    <li>
-      Chapters do not function as independent legal entities unless
-      separately incorporated in accordance with local laws.
-    </li>
-  </ul>
+      <ul class="text-measure">
+        <li class="mb-2">
+          Chapters reflect regional priorities while contributing to
+          GNCC’s global objectives.
+        </li>
+        <li class="mb-2">
+          Chapters operate with defined coordination mechanisms with
+          the GNCC Secretariat.
+        </li>
+        <li>
+          Chapters do not function as independent legal entities unless
+          separately incorporated in accordance with applicable local laws.
+        </li>
+      </ul>
+    </section>
 
-  <h2>Founding & Emerging Chapters</h2>
+    <!-- Founding Chapters -->
+    <section class="mb-5">
+      <h2 class="fw-bold mb-4">Founding & Emerging Chapters</h2>
 
-  <p>
-    GNCC is in the process of establishing founding and emerging
-    chapters in key global regions where there is significant
-    interest in Nepal-related trade, investment, and collaboration.
-  </p>
+      <p class="text-measure">
+        GNCC is in the process of establishing founding and emerging
+        chapters in key global regions where there is significant
+        interest in Nepal-related trade, investment, and collaboration.
+      </p>
 
-  <ul>
-    <li><strong>United Kingdom</strong> — Founding Chapter (in formation)</li>
-    <li><strong>Ireland</strong> — Emerging Chapter</li>
-    <li><strong>European Union</strong> — Emerging Regional Chapter</li>
-    <li><strong>Gulf Cooperation Council (GCC)</strong> — Emerging Regional Chapter</li>
-    <li><strong>Asia-Pacific</strong> — Emerging Regional Chapter</li>
-  </ul>
+      <ul class="text-measure">
+        <li><strong>United Kingdom</strong> — Founding Chapter (in formation)</li>
+        <li><strong>Ireland</strong> — Emerging Chapter</li>
+        <li><strong>European Union</strong> — Emerging Regional Chapter</li>
+        <li><strong>Gulf Cooperation Council (GCC)</strong> — Emerging Regional Chapter</li>
+        <li><strong>Asia-Pacific</strong> — Emerging Regional Chapter</li>
+      </ul>
 
-  <p>
-    Additional chapters may be established as GNCC expands its global
-    membership and engagement footprint.
-  </p>
+      <p class="text-measure mt-3">
+        Additional chapters may be established as GNCC expands its
+        global membership and engagement footprint.
+      </p>
+    </section>
 
-  <h2>Chapter Participation</h2>
+    <!-- Participation -->
+    <section>
+      <h2 class="fw-bold mb-3">Chapter Participation</h2>
 
-  <p>
-    Members may participate in chapter activities based on geographic
-    location, professional affiliation, or areas of interest, subject
-    to GNCC’s governance framework.
-  </p>
+      <p class="text-measure">
+        Members may participate in chapter activities based on geographic
+        location, professional affiliation, or areas of interest, subject
+        to GNCC’s governance framework.
+      </p>
 
-  <p>
-    Expressions of interest for chapter formation or participation
-    may be directed to the GNCC Secretariat.
-  </p>
+      <p class="text-measure">
+        Expressions of interest for chapter formation or participation
+        may be directed to the GNCC Secretariat.
+      </p>
+    </section>
 
-</main>
+  </main>
 
-<footer>
-  <div class="container">
-    <p>&copy; 2026 Global Nepal Chamber of Commerce. All rights reserved.</p>
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer class="footer-primary">
+    <div class="container">
+      <p class="footer-title mb-2">Global Nepal Chamber of Commerce</p>
+      <p class="footer-tagline mb-0">
+        An independent global institution for trade, investment, and economic collaboration.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+  </script>
 
 </body>
 </html>
