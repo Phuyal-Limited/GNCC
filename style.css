@@ -1,28 +1,39 @@
+/* ================================
+   Base
+================================ */
 
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f5f5f5;
+  background: #f6f7f9;
   color: #333;
   line-height: 1.65;
 }
+
 .container {
   width: 90%;
   max-width: 1100px;
   margin: auto;
-  padding: 24px 0; 
+  padding: 24px 0;
 }
+
+/* ================================
+   Header
+================================ */
+
 header {
   padding-bottom: 10px;
   position: relative;
   color: #003366;
   text-align: center;
 }
+
 .banner {
   width: 100%;
   max-height: 180px;
   object-fit: cover;
 }
+
 .logo {
   width: 86px;
   margin-top: -40px;
@@ -31,10 +42,16 @@ header {
   border-radius: 12px;
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
+
+/* ================================
+   Navigation
+================================ */
+
 nav {
   background-color: #003366;
   padding: 8px 0;
 }
+
 nav ul {
   list-style: none;
   margin: 0;
@@ -42,9 +59,11 @@ nav ul {
   display: flex;
   justify-content: center;
 }
+
 nav ul li {
   margin: 0 8px;
 }
+
 nav ul li a {
   color: white;
   text-decoration: none;
@@ -54,40 +73,135 @@ nav ul li a {
   display: inline-block;
   border-bottom: 2px solid transparent;
 }
-main section {
-  margin: 40px 0;
-}
-main h2 {
-  color: #004080;
-}
-footer {
-  background-color: #002244;
-  color: white;
-  text-align: center;
-  padding: 14px 0;
-  font-size: 0.9em;
-}
 
-/* Active navigation link (current page) */
+/* Active navigation link */
 nav ul li a.active {
   background: rgba(255,255,255,0.14);
   border-bottom-color: rgba(255,255,255,0.7);
 }
 
-/* Optional: subtle hover effect (safe & professional) */
+/* Hover effect */
 nav ul li a:hover {
   background: rgba(255,255,255,0.10);
   border-bottom-color: rgba(255,255,255,0.5);
 }
 
-@media (max-width: 720px){
-  nav ul{
+/* ================================
+   Main Content
+================================ */
+
+main section {
+  margin: 40px 0;
+}
+
+main h2 {
+  color: #004080;
+  margin-bottom: 0.8em;
+}
+
+main p {
+  margin-bottom: 1.2em;
+}
+
+/* Section divider (use sparingly) */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(to right, transparent, #ddd, transparent);
+  margin: 3rem 0;
+}
+
+/* ================================
+   Homepage Enhancements
+================================ */
+
+.homepage section {
+  margin: 3rem 0;
+}
+
+.hero {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.hero h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+.mission-block {
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.focus-areas-section {
+  text-align: center;
+}
+
+.focus-areas-section h3 {
+  margin-bottom: 1.5rem;
+  color: #004080;
+}
+
+.focus-areas {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.focus-areas li {
+  background: #ffffff;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  font-weight: 500;
+}
+
+.positioning {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* ================================
+   Footer
+================================ */
+
+footer {
+  background-color: #002244;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9em;
+}
+
+/* ================================
+   Responsive
+================================ */
+
+@media (max-width: 720px) {
+  nav ul {
     overflow-x: auto;
     justify-content: flex-start;
     padding: 0 10px;
     -webkit-overflow-scrolling: touch;
   }
-  nav ul li{
+
+  nav ul li {
     margin: 0 6px;
     white-space: nowrap;
   }
