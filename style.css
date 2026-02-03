@@ -236,3 +236,7 @@ footer p:first-child {
 .visual-divider img:hover {
   opacity: 0.95;
 }
+
+.visual-divider img {
+  content-visibility: auto;
+}
