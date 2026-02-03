@@ -19,10 +19,30 @@
 
 <body>
 
+  <!-- SHARED NAVIGATION -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
+
+        const currentPage =
+          window.location.pathname.split("/").pop() || "index.html";
+
+        document.querySelectorAll("nav a").forEach(link => {
+          if (link.getAttribute("data-page") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      });
+  </script>
+
   <!-- HERO -->
   <header class="hero-section py-3 text-center fade-in">
     <div class="container py-5">
       <h1 class="fw-bold mb-3">Global Nepal Chamber of Commerce</h1>
+
       <p class="lead fw-semibold mb-4">
         Mobilising Global Trade, Capital &amp; Influence for Nepal
       </p>
@@ -44,25 +64,6 @@
       </div>
     </div>
   </header>
-
-  <!-- SHARED NAVIGATION -->
-  <div id="nav-placeholder"></div>
-  <script>
-    fetch("nav.html")
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById("nav-placeholder").innerHTML = data;
-
-        const currentPage =
-          window.location.pathname.split("/").pop() || "index.html";
-
-        document.querySelectorAll("nav a").forEach(link => {
-          if (link.getAttribute("data-page") === currentPage) {
-            link.classList.add("active");
-          }
-        });
-      });
-  </script>
 
   <!-- MAIN CONTENT -->
   <main class="container py-5">
