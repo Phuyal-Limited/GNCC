@@ -215,3 +215,24 @@ footer p:first-child {
     font-size: 1.1rem;
   }
 }
+
+/* =========================
+   Visual Divider Image
+========================= */
+
+.visual-divider {
+  text-align: center;
+}
+
+.visual-divider img {
+  width: 100%;
+  max-width: 1100px;
+  height: auto;
+  border-radius: 12px;
+  opacity: 0.85;
+  filter: grayscale(100%) contrast(1.05);
+}
+
+.visual-divider img:hover {
+  opacity: 0.95;
+}
