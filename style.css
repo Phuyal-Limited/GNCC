@@ -5,8 +5,8 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f5f5f5;
-  color: #333;
+  background: #f7f8fa;
+  color: #2c2c2c;
   line-height: 1.65;
 }
 
@@ -15,6 +15,46 @@ body {
   max-width: 1100px;
   margin: auto;
   padding: 24px 0;
+}
+
+/* =========================
+   Typography
+========================= */
+
+h1 {
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-weight: 700;
+  color: #003366;
+  letter-spacing: -0.3px;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-weight: 700;
+  color: #003366;
+}
+
+h5 {
+  letter-spacing: 0.2px;
+}
+
+p {
+  color: #2c2c2c;
+}
+
+.lead {
+  font-weight: 500;
+}
+
+/* Constrain long text for readability */
+.text-measure {
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* =========================
@@ -27,10 +67,6 @@ body {
     #f8f9fa 0%,
     #ffffff 100%
   );
-}
-
-.hero-section h1 {
-  letter-spacing: -0.5px;
 }
 
 .hero-section .lead {
@@ -47,6 +83,14 @@ body {
 /* =========================
    Buttons (Institutional)
 ========================= */
+
+.btn {
+  transition: all 0.15s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
 
 .btn-lg {
   padding: 0.7rem 1.4rem;
@@ -73,6 +117,17 @@ body {
   color: #ffffff;
 }
 
+/* Button spacing on mobile */
+.btn + .btn {
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .btn + .btn {
+    margin-top: 0;
+  }
+}
+
 /* =========================
    Section Cards
 ========================= */
@@ -80,21 +135,19 @@ body {
 .section-card {
   background: #ffffff;
   border-radius: 10px;
+  border: 1px solid rgba(0,0,0,0.04);
   box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.section-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
 }
 
 /* =========================
-   Content Typography
+   Execution Blocks
 ========================= */
-
-h2, h3 {
-  color: #003366;
-  letter-spacing: -0.3px;
-}
-
-h5 {
-  letter-spacing: 0.2px;
-}
 
 .execute-block p {
   margin-bottom: 0;
@@ -106,6 +159,33 @@ h5 {
 
 .audience-list li {
   margin-bottom: 0.6rem;
+}
+
+/* =========================
+   Animations (Subtle)
+========================= */
+
+.fade-in {
+  animation: fadeInUp 0.6s ease-out both;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   Sections & Anchors
+========================= */
+
+section {
+  scroll-margin-top: 80px;
 }
 
 /* =========================
