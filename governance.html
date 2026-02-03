@@ -1,164 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Governance | Global Nepal Chamber of Commerce</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Governance | Global Nepal Chamber of Commerce (GNCC)</title>
+  <meta name="description" content="The governance framework of the Global Nepal Chamber of Commerce (GNCC), outlining its principles, structure, and commitment to transparency, independence, and accountability." />
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+
+  <!-- Site Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<header>
-  <img src="images/banner.jpg" class="banner" alt="GNCC Banner" />
-  <div class="container">
-    <img src="images/logo.png" class="logo" alt="GNCC Logo">
-    <h1>Global Nepal Chamber of Commerce (GNCC)</h1>
-  </div>
-</header>
+  <!-- Header -->
+  <header class="hero-section py-4 text-center border-bottom">
+    <div class="container">
+      <img src="images/logo.png" alt="GNCC Logo" width="90" class="mb-3">
+      <h1 class="fw-bold mb-0">Global Nepal Chamber of Commerce (GNCC)</h1>
+    </div>
+  </header>
 
-<div id="nav-placeholder"></div>
-<script>
-  fetch("nav.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("nav-placeholder").innerHTML = data;
+  <!-- Shared Navigation -->
+  <div id="nav-placeholder"></div>
+  <script>
+    fetch("nav.html")
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById("nav-placeholder").innerHTML = data;
 
-      const currentPage = window.location.pathname.split("/").pop() || "index.html";
-      const links = document.querySelectorAll("nav a");
+        const currentPage =
+          window.location.pathname.split("/").pop() || "governance.html";
 
-      links.forEach(link => {
-        if (link.getAttribute("data-page") === currentPage) {
-          link.classList.add("active");
-        }
+        document.querySelectorAll("nav a").forEach(link => {
+          if (link.getAttribute("data-page") === currentPage) {
+            link.classList.add("active");
+          }
+        });
       });
-    });
-</script>
+  </script>
 
-<main class="container">
+  <!-- Main Content -->
+  <main class="container py-5">
 
-  <h2>Governance</h2>
+    <!-- Governance Overview -->
+    <section class="mb-5">
+      <h2 class="fw-bold mb-3">Governance</h2>
+      <p class="fs-5 text-measure">
+        The Global Nepal Chamber of Commerce (GNCC) is committed to principles
+        of transparency, institutional integrity, and responsible leadership.
+        GNCC operates as an independent, non-political, and member-driven
+        global chamber platform.
+      </p>
+      <p class="text-measure">
+        The governance framework outlined below represents a foundational
+        structure designed to support the responsible growth of GNCC and
+        to evolve in line with international best practices and member
+        participation.
+      </p>
+    </section>
 
-  <p>
-    The Global Nepal Chamber of Commerce (GNCC) is committed to principles
-    of good governance, transparency, and institutional integrity.
-    GNCC operates as an independent, non-political, and member-driven
-    chamber platform.
-  </p>
+    <!-- Governance Structure -->
+    <section class="section-card p-4 p-md-5 mb-5">
+      <h2 class="fw-bold mb-4">Governance Structure</h2>
 
-  <p>
-    The governance framework outlined below represents an interim and
-    foundational structure, intended to support the responsible growth
-    of GNCC and to evolve in line with international best practices and
-    member participation.
-  </p>
+      <p class="text-measure mb-4">
+        GNCC’s governance framework is designed to balance strategic
+        direction, operational oversight, and broad-based representation.
+      </p>
 
-  <h2>Governance</h2>
+      <ul class="list-unstyled text-measure">
+        <li class="mb-3">
+          <strong>General Membership:</strong>
+          The collective body of members forming the foundation of GNCC’s
+          representative mandate.
+        </li>
+        <li class="mb-3">
+          <strong>Executive Committee:</strong>
+          Responsible for strategic oversight, policy direction, and
+          stewardship of the chamber’s objectives.
+        </li>
+        <li class="mb-3">
+          <strong>Advisory Council:</strong>
+          A consultative body providing independent guidance, expertise,
+          and international perspective.
+        </li>
+        <li>
+          <strong>Secretariat:</strong>
+          Responsible for day-to-day administration, coordination, and
+          implementation of approved programmes and activities.
+        </li>
+      </ul>
+    </section>
 
-<p>
-  The Global Nepal Chamber of Commerce (GNCC) is committed to principles
-  of good governance, transparency, and institutional integrity.
-  GNCC operates as an independent, non-political, and member-driven
-  chamber platform.
-</p>
+    <!-- Executive Committee -->
+    <section class="mb-5">
+      <h2 class="fw-bold mb-3">Executive Committee</h2>
+      <p class="text-measure">
+        The Executive Committee provides leadership and oversight to GNCC
+        and acts in the best interests of the membership and the chamber’s
+        mission.
+      </p>
+      <p class="text-measure fw-semibold">
+        The Executive Committee exercises its responsibilities through
+        defined decision-making processes, delegated authorities, and
+        periodic review mechanisms, ensuring accountability and continuity
+        during the chamber’s founding phase.
+      </p>
+      <p class="text-measure">
+        During the interim phase, Executive Committee members may be
+        appointed to establish foundational systems and processes.
+        Future composition and selection mechanisms may include elections
+        or member nominations, as determined by GNCC’s evolving governance
+        framework.
+      </p>
+    </section>
 
-<p>
-  The governance framework outlined below represents an interim and
-  foundational structure, intended to support the responsible growth
-  of GNCC and to evolve in line with international best practices and
-  member participation.
-</p>
+    <!-- Advisory Council -->
+    <section class="section-card p-4 p-md-5 mb-5">
+      <h2 class="fw-bold mb-3">Advisory Council</h2>
+      <p class="text-measure">
+        The Advisory Council supports GNCC by offering non-binding advice,
+        strategic insight, and subject-matter expertise drawn from business,
+        academia, and international institutions.
+      </p>
+      <p class="text-measure mb-0">
+        Advisory Council members do not hold executive authority and serve
+        strictly in an advisory capacity.
+      </p>
+    </section>
 
-<h2>Governance Structure</h2>
+    <!-- Principles -->
+    <section class="mb-5">
+      <h2 class="fw-bold mb-4">Principles of Governance</h2>
 
-<p>
-  GNCC’s governance framework is designed to balance strategic
-  direction, operational oversight, and broad-based representation.
-</p>
+      <ul class="text-measure">
+        <li><strong>Independence:</strong> Operating independently of political parties and partisan interests.</li>
+        <li><strong>Transparency:</strong> Conducting decision-making in a clear and accountable manner.</li>
+        <li><strong>Inclusivity:</strong> Encouraging participation across sectors, geographies, and communities.</li>
+        <li><strong>Integrity:</strong> Upholding ethical conduct and responsible leadership.</li>
+        <li><strong>Accountability:</strong> Ensuring leadership and structures remain accountable to the membership.</li>
+      </ul>
+    </section>
 
-<ul>
-  <li>
-    <strong>General Membership:</strong>
-    The collective body of members, forming the foundation of GNCC’s
-    representative mandate.
-  </li>
-  <li>
-    <strong>Executive Committee:</strong>
-    Responsible for strategic oversight, policy direction, and
-    stewardship of the chamber’s objectives.
-  </li>
-  <li>
-    <strong>Advisory Council:</strong>
-    A consultative body providing independent guidance, expertise,
-    and international perspective.
-  </li>
-  <li>
-    <strong>Secretariat:</strong>
-    Responsible for day-to-day administration, coordination, and
-    implementation of approved programmes and activities.
-  </li>
-</ul>
+    <!-- Evolution -->
+    <section>
+      <h2 class="fw-bold mb-3">Evolution of Governance</h2>
+      <p class="text-measure">
+        GNCC recognises that governance frameworks must evolve as the
+        organisation grows. This structure may be reviewed and refined
+        periodically to reflect organisational maturity, geographic
+        expansion, and member feedback.
+      </p>
+    </section>
 
-<h2>Executive Committee</h2>
+  </main>
 
-<p>
-  The Executive Committee provides leadership and oversight to GNCC
-  and acts in the best interests of the membership and the chamber’s
-  mission.
-</p>
+  <!-- Footer -->
+  <footer class="footer-primary">
+    <div class="container">
+      <p class="footer-title mb-2">Global Nepal Chamber of Commerce</p>
+      <p class="footer-tagline mb-0">
+        An independent global institution for trade, investment, and economic collaboration.
+      </p>
+    </div>
+  </footer>
 
-<p>
-  <strong>The Executive Committee exercises its responsibilities through
-  defined decision-making processes, delegated authorities, and
-  periodic review mechanisms, ensuring accountability and continuity
-  during the chamber’s founding phase.</strong>
-</p>
-
-<p>
-  During the interim phase, Executive Committee members may be
-  appointed to establish foundational systems and processes.
-  Future composition and selection mechanisms may include elections
-  or member nominations, as determined by GNCC’s evolving governance
-  framework.
-</p>
-
-<h2>Advisory Council</h2>
-
-<p>
-  The Advisory Council supports GNCC by offering non-binding advice,
-  strategic insight, and subject-matter expertise drawn from business,
-  academia, and international institutions.
-</p>
-
-<p>
-  Advisory Council members do not hold executive authority and serve
-  in an advisory capacity only.
-</p>
-
-<h2>Principles of Governance</h2>
-
-<ul>
-  <li><strong>Independence:</strong> GNCC operates independently of political parties and partisan interests.</li>
-  <li><strong>Transparency:</strong> Decision-making processes are conducted in a clear and accountable manner.</li>
-  <li><strong>Inclusivity:</strong> GNCC encourages participation across sectors, geographies, and communities.</li>
-  <li><strong>Integrity:</strong> Ethical conduct and responsible leadership are central to GNCC’s operations.</li>
-  <li><strong>Accountability:</strong> Leadership and structures are accountable to the membership.</li>
-</ul>
-
-<h2>Evolution of Governance</h2>
-
-<p>
-  GNCC recognises that governance frameworks must evolve as the
-  organisation grows. This governance structure may be reviewed and
-  refined periodically to reflect organisational maturity, geographic
-  expansion, and member feedback.
-</p>
-
-</main>
-
-<footer>
-  <div class="container">
-    <p>&copy; 2026 Global Nepal Chamber of Commerce. All rights reserved.</p>
-  </div>
-</footer>
+  <!-- Bootstrap JS -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+  </script>
 
 </body>
 </html>
